@@ -2,9 +2,9 @@ const { v4: uuidv4 } = require("uuid");
 const AWS = require("aws-sdk");
 const documentClient = new AWS.DynamoDB.DocumentClient();
 
-const ORDER_TABLE = "<Order-6a5bupn2jfdftbczplpeprwuvu-dev>";
+const ORDER_TABLE = "Order-nir4l5sfgzgltgnanb7jgkfitu-project";
 const ORDER_TYPE = "Order";
-const BOOK_ORDER_TABLE = "<BookOrder-6a5bupn2jfdftbczplpeprwuvu-dev>";
+const BOOK_ORDER_TABLE = "BookOrder-nir4l5sfgzgltgnanb7jgkfitu-project";
 const BOOK_ORDER_TYPE = "BookOrder";
 
 const createOrder = async (payload) => {
@@ -27,8 +27,7 @@ const createOrder = async (payload) => {
 
 const createBookOrder = async (payload) => {
   let bookOrders = [];
-  
-  for ( var i = 0; i < payload.cart.length; i++) {
+  for (i = 0; i < payload.cart.length; i++) {
     const cartItem = payload.cart[i];
     bookOrders.push({
       PutRequest: {
