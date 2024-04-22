@@ -1,4 +1,5 @@
 A bookstore website created with Javascript, HTML and CSS to mainly demonstrate working on AWS(EC2, S3 buckets, Lambda functions) and Amplify.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
